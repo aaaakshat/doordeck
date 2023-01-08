@@ -30,17 +30,17 @@ for i in range(len(all_names) // 8 + 1):
             y = 540
             x = 1150
 
-    x,y = (530, 500)
-    font2 = ImageFont.truetype("Breakable.ttf", 80)
+    x,y = (530, 490)
+    font2 = ImageFont.truetype("Breakable.ttf", 85)
     for name in names:
-        txt = Image.new("L", (300, 130), 255)
+        txt = Image.new("L", (280, 140), 255)
         d = ImageDraw.Draw(txt)
         d.text((0,0), name.title(),font=font2, fill=0)
         w = txt.rotate(2.1, expand=1, fillcolor=255)
         template.paste(w, (x,y))
         y += 685
         if (y > 2595):
-            y = 500
+            y = 490
             x = 1570
 
     title = "gen/page" + str(i+1) + ".png"
