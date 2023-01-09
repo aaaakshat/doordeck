@@ -3,5 +3,6 @@
 *.swp
 *.swap
 gen
+test
 *.csv
 
